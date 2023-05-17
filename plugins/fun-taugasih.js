@@ -1,6 +1,6 @@
 let handler = async (m, { conn, usedPrefix }) => {
  
-conn.sendButton(m.chat, `“${pickRandom(taugasih)}”`, wm, [['Menu', '.menu']], m)
+conn.sendButtonDoc(m.chat, `“${pickRandom(taugasih)}”`, wm, 'Menu', '.menu', m)
 }
 handler.help = ['taugasih']
 handler.tags = ['fun']

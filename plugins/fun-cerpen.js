@@ -1,6 +1,6 @@
  import fetch from 'node-fetch'
 let handler = async (m, { text,  usedPrefix,  command }) => {
-let res = await fetch(`https://api.lolhuman.xyz/api/cerpen?apikey=${global.lolkey}`)
+let res = await fetch(`https://api.lolhuman.xyz/api/cerpen?apikey=Fikrii`)
 let hasil = await res.json()
  m.reply(` 
 *Judul:* ${hasil.result.title}

@@ -27,8 +27,8 @@ Tap wa.me/${conn.user.jid.split`@`[0]}`, m.chat, {
         }
       })
 
-      if (!room.pilih) this.sendButton(room.p, 'Silahkan Pilih', `Menang +${room.poin}XP\nKalah -${room.poin_lose}XP`, [['Batu🗿', 'Batu'], ['Kertas📄', 'Kertas'], ['Gunting✂️', 'Gunting']], m)
-      if (!room.pilih2) this.send3But(room.p2, 'Silahkan Pilih', `Menang +${room.poin}XP\nKalah -${room.poin_lose}XP`, [['Batu🗿', 'Batu'], ['Kertas📄', 'Kertas'], ['Gunting✂️', 'Gunting']], m)
+      if (!room.pilih) this.send3But(room.p, 'Silahkan Pilih', `Menang +${room.poin}XP\nKalah -${room.poin_lose}XP`, 'Batu🗿', 'Batu', 'Kertas📄', 'Kertas', 'Gunting✂️', 'Gunting', m)
+      if (!room.pilih2) this.send3But(room.p2, 'Silahkan Pilih', `Menang +${room.poin}XP\nKalah -${room.poin_lose}XP`, 'Batu🗿', 'Batu', 'Kertas📄', 'Kertas', 'Gunting✂️', 'Gunting', m)
       room.waktu_milih = setTimeout(() => {
         if (!room.pilih && !room.pilih2) this.reply(m.chat, `Kedua Pemain Tidak Niat Bermain,\nSuit Dibatalkan`)
         else if (!room.pilih || !room.pilih2) {

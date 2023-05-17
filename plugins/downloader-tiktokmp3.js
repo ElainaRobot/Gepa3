@@ -2,7 +2,7 @@ import fetch from 'node-fetch'
 import axios from 'axios'
 let handler = async (m, { conn, args, command, usedPrefix }) => {
   if (!args[0]) throw `Linknya?`
- let res = await fetch(`https://api.zeltoria.my.id/api/download/tiktok?url=${args[0]}&apikey=${global.zeltoria}`)
+ let res = await fetch(`https://saipulanuar.ga/api/download/tiktok?url=${args[0]}`)
 let data = await res.json()
 let json = data.result
  await conn.sendFile(m.chat, json.audio, 'error.mp3', null, m, true, {

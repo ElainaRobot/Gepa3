@@ -17,11 +17,11 @@ Ketik ${usedPrefix}tebu Untuk Bantuan
 Bonus: ${poin} XP
     `.trim()
   conn.tebakkabupaten[id] = [
-    await conn.sendButton(m.chat, caption, wm, await (await fetch(json.url)).buffer(), [['Bantuan', '.tebu']], m)
+    await conn.sendButtonImg(m.chat, await (await fetch(json.url)).buffer(), caption, '', 'Bantuan', '.tebu', m)
     ,
     json, poin,
     setTimeout(async () => {
-      if (conn.tebakkabupaten[id]) await conn.sendButton(m.chat, `Waktu Habis!\nJawabannya Adalah *${json.title}*`, wm,  [['Main Lagi', '.tebakkabupaten']], conn.tebakkabupaten[id][0])
+      if (conn.tebakkabupaten[id]) await conn.sendBut(m.chat, `Waktu Habis!\nJawabannya Adalah *${json.title}*`, '', 'Main Lagi', '.tebakkabupaten', conn.tebakkabupaten[id][0])
       delete conn.tebakkabupaten[id]
     }, timeout)
   ]

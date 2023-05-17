@@ -8,10 +8,10 @@ handler.before = async function (m) {
     if (!(id in this.asahotak)) return m.reply('Soal Itu Telah Berakhir')
     if (m.quoted.id == this.asahotak[id][0].id) {
         let json = JSON.parse(JSON.stringify(this.asahotak[id][1]))
-        if (['Bantuan', '.ao'].includes(m.text)) return !0
+        if (['.ao', 'Bantuan', ''].includes(m.text)) return !0
         if (m.text.toLowerCase() == json.jawaban.toLowerCase().trim()) {
             global.db.data.users[m.sender].exp += this.asahotak[id][2]
-            await this.sendButton(m.chat, `*Benar!* +${this.asahotak[id][2]} XP`, '', [['Main Lagi', '.asahotak']], m)
+            await this.sendBut(m.chat, `*Benar!* +${this.asahotak[id][2]} XP`, '', 'Main Lagi', '.asahotak', m)
             clearTimeout(this.asahotak[id][3])
             delete this.asahotak[id]
         } else if (similarity(m.text.toLowerCase(), json.jawaban.toLowerCase().trim()) >= threshold) m.reply(`*Dikit Lagi!*`)

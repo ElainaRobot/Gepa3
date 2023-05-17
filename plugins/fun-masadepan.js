@@ -5,7 +5,7 @@ let handler = async (m, { conn, command, text }) => {
 `)
   }
   handler.help = ['masadepan']
-  handler.tags = ['fun']
+  handler.tags = ['fun', 'kabul']
   handler.command = /^masadepan/i
   handler.owner = false
   handler.mods = false
