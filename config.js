@@ -1,3 +1,10 @@
+// Recode By Zeltoria
+// Mau Beli Yg No Enc? 
+// wa.me/6285776353741
+
+// Script Asli By ShirokamiRyzen
+//https://github.com/ShirokamiRyzen/Nao-MD
+
 import { watchFile, unwatchFile } from 'fs'
 import chalk from 'chalk'
 import { fileURLToPath } from 'url'
@@ -28,43 +35,43 @@ const readMore = more.repeat(4001)
 
 
 global.owner = [
-['6285760451683', true],
-['6281398274790', 'Dims', true],
-['6285760451683', 'Zeltoria', true]
+['62895627413377', true],
+['628889616144', true],
+['6285776353741', 'Zeltoria', true]
 ]
 global.mods = []
 global.prems = []
-global.nomorbot = '6283872069306'
-global.nomorown = '6285760451683'
-global.nomorown1 = '6285760451683'
-global.nomorown2 = '6285760451683'
-global.nomorwa = '6285760451683'
+global.nomorbot = '6283872069307'
+global.nomorown = '6285776353741'
+global.nomorown1 = '6285776353741'
+global.nomorown2 = '6285776353741'
+global.nomorwa = '6285776353741'
 
 
 global.readMore = readMore
 global.author = 'Zeltoria'
-global.namebot = '​Euphyllia - MD'
-global.wm = '© Euphyllia By Zeltoria'
-global.media = 'https://telegra.ph/file/02a8d3c4b00146bbfeb5d.jpg'
+global.namebot = '​Yaemiko-MD'
+global.wm = '© Yaemiko By Zeltoria'
+global.media = 'https://telegra.ph/file/d368a50703e77d972118b.jpg'
 global.watermark = wm
 global.wm2 = 'Zeltoria'
 global.botdate = `Date: ${week} ${date}\nTime: ${wktuwib}`
 global.bottime = `Time: ${wktuwib}`
-global.titlebot = `Euphyllia - MD`
-global.stickpack = 'Euphyllia By'
-global.stickauth = `© Zeltoria`
+global.titlebot = `Yaemiko-Multidevice`
+global.stickpack = 'Yaemiko By'
+global.stickauth = `©Zeltoria`
 global.week = `${week} ${date}`
 global.wibb = `${wktuwib}`
 global.nameown1= 'Zeltoria'
 global.nameown2 = 'Zeltoria'
 global.Linkgc = 'Bentar'
-global.lynk = '-'
+global.lynk = 'https://lynk.id/'
 //Link Social Media Ganti Aja Kalau Ga Punya Biarin Aja
 global.sig = 'https://www.instagram.com/danilelistz02' //instagram
 global.sgh = 'https://github.com/Zeltoria' //github
-global.sgc = 'https://chat.whatsapp.com/Csjk910wJyt0ZTQGidpVUS' //group whatsapp
+global.sgc = 'https://chat.whatsapp.com/FcV0KFRw5gv99xgVgOx3cc' //group whatsapp
 global.sdc = '-' //discord
-global.snh = 'https://www.youtube.com/@zeltoria' //youtube
+global.snh = 'https://www.youtube.com/' //youtube
 //Donasi/Payment
 global.pdana = '-' // dana
 global.povo = '0896-1075-0607'
@@ -72,7 +79,7 @@ global.pgopay = '-' // gopay
 global.plinkaja = '-' //link aja
 global.ppulsa = '-' // pulsa
 global.ppulsa2 = '-' //pulsa 2
-global.psaweria = 'https://saweria.co/' // saweria
+global.psaweria = '-' // saweria
 //mending biarin aja
 global.ListHargaSewa = '├ 5 Hari IDR 3.000\n├ 7 Hari IDR 5.000\n├ 15+5 Hari IDR 10.000\n├ 30 Hari IDR 15.000'
 //⫹⫺ ╳╶╼╶╶╶╶┈ ⎝ TAMPILAN ⎞ ┈╴╴╴╴╾╴╳ ⫹⫺
@@ -102,7 +109,7 @@ global.hsquere = ['⛶','❏','⫹⫺']
 // wait proses
 global.stiker_wait = '_Sedang Di Proses, Mohon Tunggu_.....'
 global.wait = '_Sedang Di Proses, Mohon Tunggu_....'
-global.eror = 'Terjadi Kesalahan Coba Lagi Nanti!'
+global.eror = 'Terjadk Kesalahan Coba Lagi Nanti!'
 // kata game tapi biarin aja ga ngaruh :v
 global.benar = '𝙶𝚘𝚘𝚍 𝙹𝚘𝚋𝚋! ◕◡◕'
 global.salah = '𝙽𝚘𝚝 𝙱𝚊𝚍! ◕◠◕'
@@ -183,26 +190,46 @@ global.rpg = {
 
 // untuk apikey biarin aja pake ini aja kalau fitur error beli apikeynya
 global.zenzkey = 'b8040941f7'
-global.lolkey = '-'
-global.caliph = '-'
-global.rose = '-'
-global.zeltoria = 'Mwuhehe'
-global.ibeng = '-'
-global.xcode = '-'
-global.openai = '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'
+global.lolkey = 'Apikeylu'
+global.caliph = 'Lwlct6wi'
 global.APIs = {
+  nrtm: 'https://nurutomo.herokuapp.com',
+  rey: 'https://server-api-rey.herokuapp.com',
+  xteam: 'https://api.xteam.xyz',
+  zahir: 'https://zahirr-web.herokuapp.com',
   lol: 'https://api.lolhuman.xyz',
+  dhnjing: 'https://dhnjing.xyz',
+  neoxr: 'https://neoxr-api.herokuapp.com',
+  zeks: 'https://api.zeks.me',
+  pencarikode: 'https://pencarikode.xyz',
+  ana: 'https://anabotofc.herokuapp.com/',
+  amel: 'https://melcanz.com',
+  hardianto: 'https://hardianto.xyz',
+  botstyle: 'https://botstyle-api.herokuapp.com',
+  adiisus: 'https://adiixyzapi.herokuapp.com',
+  kanx: 'https://kannxapi.herokuapp.com/', 
   violetics : 'https://violetics.pw',
+  ziy : 'https://ziy.herokuapp.com',
+  males : 'https://malesin.xyz',
   rose: 'https://api.itsrose.site',
-  popcat : 'https://api.popcat.xyz',
-  xcoders : 'https://api-xcoders.site'
+  popcat : 'https://api.popcat.xyz'
 }
 
 global.APIKeys = { 
-  'https://api.lolhuman.xyz': '-',
+  'https://api.xteam.xyz': 'ebb6251cc00f9c63',
+  'https://anabotofc.herokuapp.com/': 'AnaBot',
+  'https://api.lolhuman.xyz': 'apikeylu',
+  'https://zahirr-web.herokuapp.com': 'zahirgans',
+  'https://api.zeks.me': 'apivinz',
+  'https://pencarikode.xyz': 'pais',
+  'https://melcanz.com': 'melcantik',
+  'https://neoxr-api.herokuapp.com': 'yntkts',
+  'https://server-api-rey.herokuapp.com': 'apirey',
+  'https://botstyle-api.herokuapp.com': 'Apikeymu',
+  'https://hardianto.xyz': 'hardianto',
   'https://violetics.pw': 'beta',
-  'https://api.itsrose.site': '-',
-  'https://api-xcoders.site': '-',
+  'https://api.itsrose.site': '6db1a278210ca11a593ef055',
+  'https://ziy.herokuapp.com' : 'xZiyy'
 }
 
 global.dpptx = 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
@@ -215,15 +242,15 @@ global.premnsfw = true
 // foto/image bot
 //ganti aja kalau ga tau cara gantinya buka telegra.ph upload
 //foto nya di situ terus salin link nya kesini
-global.thumb = 'https://telegra.ph/file/5adcb114b279c0085ac15.jpg' 
-global.imagebot = 'https://telegra.ph/file/5adcb114b279c0085ac15.jpg'
+global.thumb = 'https://telegra.ph/file/9eddb9c67b22a5488ef52.jpg' 
+global.imagebot = 'https://telegra.ph/file/9eddb9c67b22a5488ef52.jpg'
 global.giflogo = 'https://telegra.ph/file/c02bad57b6ce1d594a11c.mp4'
-global.thumbs = ['https://telegra.ph/file/5adcb114b279c0085ac15.jpg']
+global.thumbs = ['https://telegra.ph/file/6a25601518c0268e922fe.jpg']
 global.thumbnailUrl = [
   'https://telegra.ph/file/ef4b742d47e6a9115e2ff.jpg'
 ]
-global.fotonya1 = 'https://telegra.ph/file/5f899d845e7023eeb9429.jpg'
-global.fotonya2 = 'https://telegra.ph/file/5b5220c6691c15b65b1af.jpg' 
+global.fotonya1 = 'https://telegra.ph/file/0a4bbeddf9fe0e7137453.jpg'
+global.fotonya2 = 'https://telegra.ph/file/00f7c04f645c3030a97b5.jpg' 
 global.flaaa2 = [
  "https://flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=water-logo&script=water-logo&fontsize=90&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextColor=%23000&shadowGlowColor=%23000&backgroundColor=%23000&text=",
  "https://flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=crafts-logo&fontsize=90&doScale=true&scaleWidth=800&scaleHeight=500&text=",
@@ -252,13 +279,13 @@ global.hoppai = ['https://telegra.ph/file/f34d76df4a2065af1a5ba.jpg','https://te
 
 
 global.dtu = 'Official Group'
-global.urlnya = "https://chat.whatsapp.com/CrVqu3mXYJbJFgkbtV0sAR"
+global.urlnya = "https://chat.whatsapp.com/JVEmPlaxZl207VPz1r5TAQ"
 global.dtc = 'Call Owner'
 global.phn = '0813 8730 7198'
 
 global.fsizedoc = '999'
 global.fpagedoc = '999'
-global.thumbdoc = 'https://telegra.ph/file/5adcb114b279c0085ac15.jpg'
+global.thumbdoc = 'https://telegra.ph/file/6e45318d7c76f57e4a8bd.jpg'
 
 let file = fileURLToPath(import.meta.url)
 watchFile(file, () => {
