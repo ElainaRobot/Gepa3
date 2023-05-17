@@ -14,5 +14,5 @@ key: {
  handler.help = ['react']
 handler.tags = ['tools']
 handler.command = /^(react)$/i
-handler.limit = true
+
 export default handler

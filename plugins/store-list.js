@@ -15,18 +15,22 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 		description: "Berikut Daftarnya Yang Ada Di List Store...",
 		footerText: wm,
 	};
-	if (msg[0]) return await m.reply(`
-┌「 *Daftar Store* 」
-${msg}
-└──────────
-`.trim())
+	if (msg[0]) return await conn.sendListM(m.chat, button, row, m);
 	else
 		throw `\nBelum Ada Yang Di Jual\nKetik *${
 			usedPrefix + command
 		} <teks>* Untuk Menambahkan Daftarnya.\n`;
 };
 handler.help = ["liststore"]
-handler.tags = ["main"];
+handler.tags = ["database"];
 handler.command = /^list(store|shop)?$/i;
 
-export default handler
+export default handler;
+
+/**
+ * Jangan di hapus
+ *
+ * Buatan FokusDotId (Fokus ID)
+ * https://github.com/fokusdotid
+ *
+ */

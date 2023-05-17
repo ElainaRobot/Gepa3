@@ -1,7 +1,7 @@
 import { sticker } from '../lib/sticker.js'
 
 let handler = async (m, { conn, text, usedPrefix, command }) => {
-await m.reply(`${global.stiker_wait}`)
+await m.reply(md)
 let stiker = await sticker(null, global.API(`${pickRandom(stikerhuuu)}`), global.packname, global.author)
     if (stiker) return conn.sendFile(m.chat, stiker, 'sticker.webp', '', m)
     throw stiker.toString()
@@ -9,7 +9,7 @@ let stiker = await sticker(null, global.API(`${pickRandom(stikerhuuu)}`), global
 }
 
 handler.help = ['stickerhentai', 'shentai']
-handler.tags = ['sticker','premium']
+handler.tags = ['sticker']
 handler.command = /^(stickerhentai|shentai)$/i
 handler.premium = true
 

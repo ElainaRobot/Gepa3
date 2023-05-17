@@ -7,7 +7,7 @@ let handler = async (m, { conn, text }) => {
 handler.help = ['readmore', 'spoiler']
 handler.tags = ['tools']
 handler.command = /^(spoiler|hidetext|readmore|selengkapnya)$/i
-handler.limit = true
+
 export default handler
 
 const more = String.fromCharCode(8206)

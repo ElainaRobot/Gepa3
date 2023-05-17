@@ -6,8 +6,6 @@ let handler = async (m, { args, usedPrefix, command }) => {
 	let res = await checkWeb(args)
 	m.reply(res.map(v => `*• Domain:* ${v.Domain}\n*• Status:* ${v.Status}`).join('\n\n'))
 }
-handler.tags = ['tools']
-handler.help = ['webcek']
 handler.command = /^web(check|cek)|(check|cek)web$/i
 handler.limit = true
 export default handler

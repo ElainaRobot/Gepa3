@@ -33,6 +33,6 @@ let handler = async (m, { conn, text }) => {
 handler.help = ['calc']
 handler.tags = ['tools']
 handler.command = /^(calc(ulat(e|or))?|kalk(ulator)?)$/i
-handler.limit = true
+handler.exp = 5
 
 export default handler

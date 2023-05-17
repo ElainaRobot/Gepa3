@@ -4,8 +4,6 @@ async function handler(m) {
     if (!q.quoted) throw 'Pesan Yang Kamu Reply Tidak Mengandung Reply!'
     await q.quoted.copyNForward(m.chat, true)
 }
-handler.tags = ['tools']
-handler.help = ['q']
 handler.command = /^q$/i
-handler.limit = true
+
 export default handler

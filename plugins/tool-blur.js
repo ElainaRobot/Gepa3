@@ -16,8 +16,6 @@ let handler = async (m, { conn, text }) => {
 		m.reply(buffer)
 	})
 }
-handler.tags = ['tools']
-handler.help = ['blur']
 handler.command = /^(blur)$/i
 
 export default handler
