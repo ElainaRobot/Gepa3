@@ -10,7 +10,7 @@ let handler = async (m, { conn, usedPrefix, text, command }) => {
 
 
 handler.help = ['delcmd']
-handler.tags = ['owner']
+handler.tags = ['database', 'premium']
 handler.command = ['delcmd']
 handler.premium = true
 

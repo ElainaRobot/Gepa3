@@ -12,7 +12,7 @@ let stiker = await sticker(null, global.API(`${pickRandom(stikerhuuu)}`), global
           showAdAttribution: true,
     mediaUrl: sgc,
     mediaType: 2,
-    description: 'Lia - MD', 
+    description: 'Yaemiko Multidevices', 
     title: 'Hai, ' + name + ' ' + ucapan,
     body: botdate,
     thumbnail: await(await fetch(pp)).buffer(),

@@ -24,7 +24,7 @@ handler.all = async function (m) {
         
 		// Ini untuk command crator/owner
 		global.kontak2 = [
-         [owner[0], await conn.getName(owner[0] + '6285760451683@s.whatsapp.net'), 'Zeltoria', 'https://foryu.zeltoria.my.id', true], // Kalo mau di tambah tinggal copy 1baris ini di tempel di bawahnya trs di edit dikit!
+         [owner[0], await conn.getName(owner[0] + '6283872069307@s.whatsapp.net'), 'Zeltoria', 'http://zeltoria.github.io', true], // Kalo mau di tambah tinggal copy 1baris ini di tempel di bawahnya trs di edit dikit!
         ]
         
 		// ucapan ini mah
@@ -43,16 +43,16 @@ handler.all = async function (m) {
 					title: "Hai " + name,
 					body: "Jangan Lupa Bernafas",
 					mediaUrl: sgc,
-					description: 'Euphyllia - MD',
+					description: 'Yaemiko-MD',
 					previewType: "PHOTO",
 					thumbnail: await (await fetch(pp)).buffer(),
-					sourceUrl: "https://foryu.zeltoria.my.id",					
+					sourceUrl: "https://zeltoria.github.io",					
 				}
 			}
 		}
 		global.fakeig = {
          contextInfo: { externalAdReply: { showAdAttribution: true,
-            title: 'Euphyllia - MD',
+            title: 'Yaemiko-MD',
             body: wm,
             thumbnailUrl: pp,
             sourceUrl: sgc

@@ -40,7 +40,7 @@ async function handler(m, { command, conn, text }) {
 		);
 }
 handler.help = ["sendkontak"];
-handler.tags = ["tools"]
+handler.tags = "anonymous";
 handler.command = /^(sendkontak)$/i;
 handler.private = true;
 
