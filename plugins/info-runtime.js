@@ -3,7 +3,6 @@ import fetch from 'node-fetch'
 import moment from 'moment-timezone'
 let handler = async (m, { conn, args, command }) => {
 	let _muptime
-	let ehee = 'https://telegra.ph/file/a7dac3bd29a0da6ab60ea.jpg'
     if (process.send) {
       process.send('uptime')
       _muptime = await new Promise(resolve => {
@@ -32,7 +31,16 @@ let handler = async (m, { conn, args, command }) => {
        let tag = `@${m.sender.replace(/@.+/, '')}`
   let mentionedJid = [m.sender]
     
- conn.sendButton(m.chat, `Aktif Selama\n` + muptime, wm, ehee, [['\nKakek Gw Suguono', 'huuu']], m)
+ conn.sendButtonDoc(m.chat, `Aktif Selama ` + muptime, '', '\nKakek Gw Suguono', 'huuu', m, { contextInfo: { externalAdReply: { showAdAttribution: true,
+    mediaUrl: 'https://github.com/Zeltoria',
+    mediaType: 2, 
+    description: sgc,
+    title: "Yaemiko-MultiDevice",
+    body: wm,
+    thumbnail: fs.readFileSync('./thumbnail.jpg'),
+    sourceUrl: sgc
+     }}
+  })
 }
 handler.help = ['runtime']
 handler.tags = ['info']
@@ -63,5 +71,5 @@ function clockString(ms) {
   let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000) % 24
   let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
   let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
-  return [d, ' *Hari ', h, ' Jam ', m, ' Menit ', s, ' Detik*'].map(v => v.toString().padStart(2, 0)).join('')
+  return [d, ' *Hari*\n ', h, ' *Jam*\n ', m, ' *Menit*\n ', s, ' *Detik* '].map(v => v.toString().padStart(2, 0)).join('')
 }

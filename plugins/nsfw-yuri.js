@@ -1,10 +1,10 @@
 let handler = async (m, { conn, usedPrefix, command }) => {
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 let name = conn.getName(who)
-              conn.sendMessage(m.chat, { image : { url : pickRandom(yuri) }, caption : `Cih Dasar Sangean` }, m)
+  conn.sendButton(m.chat, `Cih Dasar Sangean`, wm, pickRandom(yuri), [['\nJadi Sange :v', `huuu`]],m)
 }
 handler.help = ['yuri']
-handler.tags = ['nsfw','premium']
+handler.tags = ['nsfw']
 handler.command = /^(yuri)$/i
 
 handler.premium = true

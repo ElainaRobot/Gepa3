@@ -1,51 +1,6 @@
-import fs from 'fs'
+// Recode By Zeltoria
+// Mau Beli Yg No Enc? 
+// wa.me/6285776353741
 
-let handler = async (m, { conn }) => {
-	let krtu = `Thanks To :
-	
-• Adiwajshing
-https://github.com/adiwajshing
 
-• Nurutomo
-https://github.com/Nurutomo
-
-• BochilGaming
-https://github.com/BochilGaming
-
-• ShirokamiRyzen
-https://github.com/ShirokamiRyzen
-
-• ImYanXiao
-https://github.com/ImYanXiao
-
-• Ekuzika
-http://github.com/Rmdhn-20
-
-• David 
-https://github.com/xct007
-
-Dan Semua Yang Berkontribusi 
-Dalam Pengambangan Script Ini
-
-Penulis Ulang : Zeltoria
-https://github.com/Zeltoria
-
-Special Thanks To : Vynaa Chan >,<`;
-	await conn.sendButton(m.chat, krtu, botdate, fotonya2, [['\nKakek Gw Sugiono','huuu']], m, {
-contextInfo: { externalAdReply :{
-                        mediaUrl: '',
-                        mediaType: 2,
-                        description: 'anu',
-                        title: 'Euphyllia - MD',
-                        body: wm,          previewType: 0,
-                        thumbnail: fs.readFileSync("./thumbnail.jpg"),
-                        sourceUrl: sig
-                      }}
-})
-}
-handler.help = ['thankstoo']
-handler.tags = ['info']
-handler.command = /^(thankstoo|thanksto|credits|tqto)$/i;
-handler.group = false;
-
-export default handler;
+function _0x4f60(){const _0x79a9df=['readFileSync','2762uMejzU','Thanks\x20To\x20:\x0a\x09\x0a•\x20Adiwajshing\x0ahttps://github.com/adiwajshing\x0a\x0a•\x20Nurutomo\x0ahttps://github.com/Nurutomo\x0a\x0a•\x20BochilGaming\x0ahttps://github.com/BochilGaming\x0a\x0a•\x20ShirokamiRyzen\x0ahttps://github.com/ShirokamiRyzen\x0a\x0a•\x20Ekuzika\x0ahttp://github.com/Rmdhn-20\x0a\x0a•\x20David\x20\x0ahttps://github.com/xct007\x0a\x0aDan\x20Semua\x20Yang\x20Berkontribusi\x20\x0aDalam\x20Pengambangan\x20Script\x20Ini\x0a\x0aIde\x20For\x20This\x20Script\x20:\x20Vynaa\x0ahttps://github.com/Vynaabots\x0a\x0aPenulis\x20Ulang\x20:\x20Zeltoria\x0ahttps://github.com/Zeltoria\x0a\x0aMy\x20Support\x20:\x20All\x20Creator\x20Bot','huuu','830274FADUZw','Script\x20By\x20Zeltoria','1520sKnNcA','sendButton','command','./thumbnail.jpg','10jKTZwk','83AtjxUj','21OpuUGU','143720cmPYDi','2979581HfwPbC','26020bCLbTM','\x0aKakek\x20Gw\x20Sugiono','anu','36fzSENT','98676nCmXpa'];_0x4f60=function(){return _0x79a9df;};return _0x4f60();}const _0xfa1d6a=_0x4cc3;(function(_0x2c2d74,_0x45bfaf){const _0x14719c=_0x4cc3,_0x2e27dd=_0x2c2d74();while(!![]){try{const _0x21af90=-parseInt(_0x14719c(0xca))/0x1*(-parseInt(_0x14719c(0xc0))/0x2)+-parseInt(_0x14719c(0xc3))/0x3+-parseInt(_0x14719c(0xc5))/0x4+parseInt(_0x14719c(0xc9))/0x5*(-parseInt(_0x14719c(0xbe))/0x6)+parseInt(_0x14719c(0xcb))/0x7*(parseInt(_0x14719c(0xcc))/0x8)+parseInt(_0x14719c(0xbd))/0x9*(parseInt(_0x14719c(0xce))/0xa)+parseInt(_0x14719c(0xcd))/0xb;if(_0x21af90===_0x45bfaf)break;else _0x2e27dd['push'](_0x2e27dd['shift']());}catch(_0x402841){_0x2e27dd['push'](_0x2e27dd['shift']());}}}(_0x4f60,0x221f7));import _0x364382 from'fs';let handler=async(_0x36dd74,{conn:_0x4983cb})=>{const _0x1cbd57=_0x4cc3;let _0xe061f6=_0x1cbd57(0xc1);await _0x4983cb[_0x1cbd57(0xc6)](_0x36dd74['chat'],_0xe061f6,botdate,fotonya2,[[_0x1cbd57(0xcf),_0x1cbd57(0xc2)]],_0x36dd74,{'contextInfo':{'externalAdReply':{'mediaUrl':'','mediaType':0x2,'description':_0x1cbd57(0xbc),'title':_0x1cbd57(0xc4),'body':wm,'previewType':0x0,'thumbnail':_0x364382[_0x1cbd57(0xbf)](_0x1cbd57(0xc8)),'sourceUrl':sig}}});};function _0x4cc3(_0x1ac170,_0x3b3f80){const _0x4f60bc=_0x4f60();return _0x4cc3=function(_0x4cc38c,_0x2cd402){_0x4cc38c=_0x4cc38c-0xbc;let _0x2b9bc2=_0x4f60bc[_0x4cc38c];return _0x2b9bc2;},_0x4cc3(_0x1ac170,_0x3b3f80);}handler[_0xfa1d6a(0xc7)]=/^(thankstoo|thanksto|credits|tqto)$/i,handler['group']=![];export default handler;

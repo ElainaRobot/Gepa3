@@ -6,11 +6,11 @@ let handler = async (m, { conn, usedPrefix, command, text, args }) => {
   
 	if (!res.ok) throw await res.text()
 	let json = await res.json()
-	conn.sendButton(m.chat, `Nyaww~ ${command.capitalize()}`, wm, json.url, [['\nJadi Sange', `huuu`]], m)
+	conn.sendButton(m.chat, `Nyaww~ ${command.capitalize()}`, json.url, json.url, [['\nJadi Sange', `huuu`]], m)
 }
-handler.tags = ['premium','nsfw']
-handler.help = ['lewd2']
-handler.command = /^(lewd2)$/i
+handler.tags = ['asupan','nsfw']
+handler.help = ['lewd']
+handler.command = /^(lewd)$/i
 handler.premium = true
 handler.limit = true
 

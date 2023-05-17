@@ -2,11 +2,11 @@ let handler = async (m, { conn, usedPrefix, command }) => {
   await m.reply(`*_ᴛᴜɴɢɢᴜ sᴇʙᴇɴᴛᴀʀ_*`)
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 let name = conn.getName(who)
-             conn.sendMessage(m.chat, { image : { url : pickRandom(hnt_gifs) }, caption : `Cih Dasar Sangean` }, m)
+  conn.sendButton(m.chat, `Nih *${name}*`, botdate, pickRandom(hnt_gifs), [['Next', `/hnt_gifs`]],m)
 }
 handler.help = ['hnt_gifs']
-handler.tags = ['nsfw','premium']
-handler.command = /^(hentaivideo)$/i
+handler.tags = ['anime', 'nsfw']
+handler.command = /^(hnt_gifs)$/i
 
 handler.premium = true
 

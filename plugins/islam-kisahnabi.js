@@ -19,7 +19,7 @@ ${kisah.description}`
 
      }
 handler.help = ['kisahnabi']
-handler.tags = ['islamic']
+handler.tags = ['islami']
 handler.command = /^kisahnabi$/i
 handler.register = false
 handler.limit = true

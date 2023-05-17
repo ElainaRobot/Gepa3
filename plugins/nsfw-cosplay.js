@@ -4,9 +4,10 @@ let handler = async (m, { conn }) => {
    	let url = cosplay[Math.floor(Math.random() * cosplay.length)]
 	let tekk = `\`\`\`➩ Nih mek! \`\`\` `
 	
-	                  conn.sendMessage(m.chat, { image : { url : pickRandom(global.cosplay) }, caption : `Cih Dasar Sangean` }, m)
+	conn.sendButton(m.chat, `Cih Dasar Sangean`, wm, url, [['\nJadi Sange :v','huuu']], m)
+	
 }
-handler.tags = ['nsfw','premium']
+handler.tags = ['nsfw']
 handler.help = ['cosplaydewasa']
 handler.command = /^(cosplaydewasa)$/i
 handler.premium = true

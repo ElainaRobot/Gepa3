@@ -7,10 +7,10 @@ Silakan Aktifkan`
 
    let fimgb = Buffer.from(await anu.arrayBuffer())
 
-                       conn.sendMessage(m.chat, { image : { url : pickRandom(fimgb) }, caption : `Cih Dasar Sangean` }, m)
+    conn.sendButton(m.chat, 'Cih Dasar Sangean', wm, fimgb, [['\nJadi Sange :v', 'huuu']], m)
 }
 handler.help = ['feets']
-handler.tags = ['nsfw','premium']
+handler.tags = ['nsfw']
 handler.command = /^(feets)$/i
 handler.limit = true
 handler.premium = true

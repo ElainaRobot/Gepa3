@@ -18,7 +18,7 @@ contextInfo: { externalAdReply :{
                         mediaUrl: '',
                         mediaType: 2,
                         description: 'anu',
-                        title: 'Euphyllia - MD',
+                        title: 'Yaemiko-Multidevice',
                         body: wm,          previewType: 0,
                         thumbnail: fs.readFileSync("./thumbnail.jpg"),
                         sourceUrl: sig
@@ -26,7 +26,7 @@ contextInfo: { externalAdReply :{
 })
 }
 handler.help = ['rules']
-handler.tags = ['info']
-handler.command = /^(rules|rule)$/i;
+handler.tags = ['info','main']
+handler.command = /^(rules)$/i;
 
 export default handler;
