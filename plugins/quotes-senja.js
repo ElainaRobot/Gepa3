@@ -6,7 +6,7 @@ m.reply(senjai)
 handler.help = ['senja']
 handler.tags = ['quotes']
 handler.command = /^(senja)$/i
-handler.limit = true
+
 export default handler
 
 function pickRandom(list) {

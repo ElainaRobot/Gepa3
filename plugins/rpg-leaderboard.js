@@ -9,7 +9,6 @@ const leaderboards = [
   'diamond',
   'emerald',
   'trash',
-  'joinlimit',
   'potion',
   'petFood',
   'wood',
@@ -27,39 +26,32 @@ let handler = async (m, { conn, args, participants, usedPrefix, command }) => {
   })
   let leaderboard = leaderboards.filter(v => v && users.filter(user => user && user[v]).length)
   let type = (args[0] || '').toLowerCase()
-  const getPage = (item) => Math.ceil((users.filter(user => user && user[item]).length) / 0)
-  let wrong = `Type List :
+  const getPage = (item) => Math.ceil((users.filter(user => user && user[item]).length) / 20)
+  let wrong = `
+Use format *${usedPrefix}${command} [type] [page]*
+example *${usedPrefix}${command} money 1*
+
+📍 Type list
 ${leaderboard.map(v => `
-${rpg.emoticon(v)} - ${v}
+${rpg.emoticon(v)}${v}
 `.trim()).join('\n')}
-––––––––––––––––––––––––
-Type :
-⮕ Untuk Melihat Leaderboard Yang Lain:
-${usedPrefix}${command} [type]
-★ Contoh:
-${usedPrefix}${command} legendary`.trim()
-  if (!leaderboard.includes(type)) 
-  return conn.sendButton(m.chat,'*––––『 LEADERBOARD 』––––*', wrong, 'https://telegra.ph/file/f76e2e329f8f743274eec.jpg', [
-[`Exp`, `${usedPrefix}lb exp`],
-[`Money`, `${usedPrefix}lb money`]
-], m, {asLocation: false})
+`.trim()
+  if (!leaderboard.includes(type)) return m.reply(wrong)
   let page = isNumber(args[1]) ? Math.min(Math.max(parseInt(args[1]), 0), getPage(type)) : 0
   let sortedItem = users.map(toNumber(type)).sort(sort(type))
   let userItem = sortedItem.map(enumGetKey)
   // let len = args[0] && args[0].length > 0 ? Math.min(100, Math.max(parseInt(args[0]), 5)) : Math.min(5, sortedExp.length)
   let text = `
-🏆 Rank: ${userItem.indexOf(m.sender) + 1} Out Of ${userItem.length}
+▣› *${rpg.emoticon(type)}${type} Leaderboard* ‹▣
+*📑 Page:* ${page} of ${getPage(type)}
+*🎖️ You:* *${userItem.indexOf(m.sender) + 1}* of *${userItem.length}*
 
-                    *• ${rpg.emoticon(type)} ${type} •*
-
-${sortedItem.slice(page * 0, page * 5 + 5).map((user, i) => `${i + 1}.*﹙${user[type]}﹚*- ${participants.some(p => areJidsSameUser(user.jid, p.id)) ? `${conn.getName(user.jid)} \nwa.me/` : 'Dari Grup Lain\n @'}${user.jid.split`@`[0]}`).join`\n\n`}
+${sortedItem.slice(page * 20, page * 20 + 20).map((user, i) => '▣\n' + `│ ${i + 1}〉 ${participants.some(p => areJidsSameUser(user.jid, p.id)) ? `(${conn.getName(user.jid)}) wa.me/` : '@'}${user.jid.split`@`[0]}\n│▸ ${user[type]} ${type}${rpg.emoticon(type)}`).join`\n┗────────────·····\n\n`}
+┗────────────·····
 `.trim()
-  return conn.sendButton(m.chat, `*–『 GLOBAL LEADERBOARD 』–*`, text, 'https://telegra.ph/file/f76e2e329f8f743274eec.jpg', [
-[`Top 50`, `${usedPrefix}lb ${type} 9`],
-[`Top 100`, `${usedPrefix}lb ${type} 19`]
-], m, {
-    mentions: [...userItem.slice(page * 0, page * 5 + 5)].filter(v => !participants.some(p => areJidsSameUser(v, p.id))),
-    asLocation: false})
+  return m.reply(text, null, {
+    mentions: [...userItem.slice(page * 20, page * 20 + 20)].filter(v => !participants.some(p => areJidsSameUser(v, p.id)))
+  })
 }
 handler.help = ['leaderboard', 'lb']
 handler.tags = ['xp']

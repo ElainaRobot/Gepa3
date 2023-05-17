@@ -9,7 +9,7 @@ let stiker = await sticker(null, global.API(`${pickRandom(stikerhuuu)}`), global
 }
 
 handler.help = ['hoppai', 'hoppai']
-handler.tags = ['sticker']
+handler.tags = ['sticker', 'premium']
 handler.command = /^(stickhoppai|hoppai)$/i
 handler.premium = true
 

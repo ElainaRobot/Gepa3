@@ -1,12 +1,12 @@
 let handler = async (m, { conn, args, usedPrefix }) => {
-	let info = `*Contoh:* ${usedPrefix}feed kucing
+	let info = `*➞ ᴇxᴀᴍᴘʟᴇ:* ${usedPrefix}feed kucing
 - - - - - - - - - - - - - - - - - - - - - - - - - 
 ${htki} LIST PET ${htka}
-🐈 • Cat
-🐕 • Dog
-🦊 • Fox
-🐎 • Horse`
-let pesan = pickRandom(['Nyumm~', 'Makasih', 'Terima Kasih ^-^', '...', 'Nyawww~', 'Arigattou ^-^'])
+🐈 • ᴄᴀᴛ
+🐕 • ᴅᴏɢ
+🦊 • ғᴏx
+🐎 • ʜᴏʀsᴇ`
+let pesan = pickRandom(['ɴʏᴜᴍᴍᴍ~', 'ᴛʜᴀɴᴋs', 'ᴛʜᴀɴᴋʏᴏᴜ ^-^', '...', 'ᴛʜᴀɴᴋ ʏᴏᴜ~', 'ᴀʀɪɢᴀᴛᴏᴜ ^-^'])
     let type = (args[0] || '').toLowerCase()
     let emo = (type == 'fox' ? '🦊':'' || type == 'cat' ? '🐈':'' || type == 'dog' ? '🐕':'' || type == 'horse' ? '🐴':'' ) 
     let user = global.db.data.users[m.sender]
@@ -16,8 +16,8 @@ let pesan = pickRandom(['Nyumm~', 'Makasih', 'Terima Kasih ^-^', '...', 'Nyawww~
     let anjing = global.db.data.users[m.sender].dog
     switch (type) {
         case 'fox':
-            if (rubah == 0) return conn.sendButton(m.chat, `Tidak Di Temukan`, 'Kamu Belum Punya Pet Ini!', null, [['Inventory', '.inv'],['Beli Pet', '.petshop']],m)
-            if (rubah == 10) return conn.sendButton(m.chat, `Max Level`, 'Pet Kamu Sudah Max Level !', null, [['Inventory', '.inv'],['Beli Pet Baru', '.petshop']],m)
+            if (rubah == 0) return conn.sendButton(m.chat, `${htki} NOT FOUND ${htka}`, 'ʏᴏᴜ ᴅᴏɴ\'ᴛ ʜᴀᴠᴇ ᴛʜɪs ᴘᴇᴛ ʏᴇᴛ!', null, [['ɪɴᴠᴇɴᴛᴏʀʏ', '.inv'],['ʙᴜʏ ᴘᴇᴛ', '.petshop']],m)
+            if (rubah == 10) return conn.sendButton(m.chat, `${htki} LEVEL MAX ${htka}`, 'ʏᴏᴜʀ ᴘᴇᴛ ɪs ᴍᴀx ʟᴇᴠᴇʟ !', null, [['ɪɴᴠᴇɴᴛᴏʀʏ', '.inv'],['ʙᴜʏ ɴᴇᴡ ᴘᴇᴛ', '.petshop']],m)
             let __waktur = (new Date - user.foxlastfeed)
             let _waktur = (600000 - __waktur)
             let waktur = clockString(_waktur)
@@ -26,21 +26,21 @@ let pesan = pickRandom(['Nyumm~', 'Makasih', 'Terima Kasih ^-^', '...', 'Nyawww~
                     user.petFood -= 1
                     user.foxexp += 20
                     user.foxlastfeed = new Date * 1
-                    m.reply(`Feeding *${type}*...\n*${emo} ${type.capitalize()}:* ${pesan}`)
+                    m.reply(`ғᴇᴇᴅɪɴɢ *${type}*...\n*${emo} ${type.capitalize()}:* ${pesan}`)
                     if (rubah > 0) {
                         let naiklvl = ((rubah * 100) - 1)
                         if (user.foxexp > naiklvl) {
                             user.fox += 1
                             user.foxexp -= (rubah * 100)
-                            conn.sendButton(m.chat, `Level Up`, `*Selamat!* , Pet Kamu Naik Level`,null, [['Inventory', '.inv'],['Ability Pet', '.petshop']], m)
+                            conn.sendButton(m.chat, `${htki} LEVELUP ${htka}`, `*ᴄᴏɴɢʀᴀᴛs!* , ʏᴏᴜʀ ᴘᴇᴛ ʟᴇᴠᴇʟᴜᴘ`,null, [['ɪɴᴠᴇɴᴛᴏʀʏ', '.inv'],['sᴇᴇ ᴀʙɪʟɪᴛʏ ᴘᴇᴛ', '.petshop']], m)
                         }
                     }
-                } else m.reply(`Makanan Pet Kamu Tida Ada`)
-            } else conn.sendButton(m.chat, `Cooldown`, `Pet Kamu Udah Kenyang, Bisa Memberimakan Pet Lagi Dalam Waktu\n*${waktur}*`, null, [['Inventory', '.inv']], m)
+                } else m.reply(`ʏᴏᴜʀ ᴘᴇᴛ ғᴏᴏᴅ ɴᴏᴛ ᴇɴᴏᴜɢʜ`)
+            } else conn.sendButton(m.chat, `${htki} COOLDOWN ${htka}`, `ʏᴏᴜʀ ᴘᴇᴛ ɪs ғᴜʟʟ, ᴛʀʏ ғᴇᴇᴅɪɴɢ ɪᴛ ᴀɢᴀɪɴ ɪɴ\n➞ *${waktur}*`, null, [['ɪɴᴠᴇɴᴛᴏʀʏ', '.inv']], m)
             break
         case 'cat':
-            if (kucing == 0) return conn.sendButton(m.chat, `Tidak Di Temukan`, 'Kamu Belum Mempunyai Pet Ini!', null, [['Inventory', '.inv'],['Beli Pet', '.petshop']],m)
-            if (kucing == 10) return conn.sendButton(m.chat, `Level Max`, 'Pet Kamu Sudah Level Max', null, [['Inventory', '.inv'],['Beli Pet Baru', '.petshop']],m)
+            if (kucing == 0) return conn.sendButton(m.chat, `${htki} NOT FOUND ${htka}`, 'ʏᴏᴜ ᴅᴏɴ\'ᴛ ʜᴀᴠᴇ ᴛʜɪs ᴘᴇᴛ ʏᴇᴛ!', null, [['ɪɴᴠᴇɴᴛᴏʀʏ', '.inv'],['ʙᴜʏ ᴘᴇᴛ', '.petshop']],m)
+            if (kucing == 10) return conn.sendButton(m.chat, `${htki} LEVEL MAX ${htka}`, 'ʏᴏᴜʀ ᴘᴇᴛ ɪs ᴍᴀx ʟᴇᴠᴇʟ !', null, [['ɪɴᴠᴇɴᴛᴏʀʏ', '.inv'],['ʙᴜʏ ɴᴇᴡ ᴘᴇᴛ', '.petshop']],m)
             let __waktuc = (new Date - user.catlastfeed)
             let _waktuc = (600000 - __waktuc)
             let waktuc = clockString(_waktuc)
@@ -56,15 +56,15 @@ let pesan = pickRandom(['Nyumm~', 'Makasih', 'Terima Kasih ^-^', '...', 'Nyawww~
                         if (user.catexp > naiklvl) {
                             user.cat += 1
                             user.catngexp -= (kucing * 100)
-                            conn.sendButton(m.chat, `Level Up`, `*Selamat!* , Pet Kamu Naik Level`,null, [['Inventory', '.inv'],['sᴇᴇ ᴀʙɪʟɪᴛʏ ᴘᴇᴛ', '.petshop']], m)
+                            conn.sendButton(m.chat, `${htki} LEVELUP ${htka}`, `*ᴄᴏɴɢʀᴀᴛs!* , ʏᴏᴜʀ ᴘᴇᴛ ʟᴇᴠᴇʟᴜᴘ`,null, [['ɪɴᴠᴇɴᴛᴏʀʏ', '.inv'],['sᴇᴇ ᴀʙɪʟɪᴛʏ ᴘᴇᴛ', '.petshop']], m)
                         }
                     }
-                } else m.reply(`Makanan Pet Kamu Tidak Ada`)
-            } else conn.sendButton(m.chat, `Level Up`, `Pet Kamu Udah Kenyang, Bisa Memberimakan Pet Lagi Dalam Waktu\n*${waktuc}*`, null, [['Inventory', '.inv']], m)
+                } else m.reply(`ʏᴏᴜʀ ᴘᴇᴛ ғᴏᴏᴅ ɴᴏᴛ ᴇɴᴏᴜɢʜ`)
+            } else conn.sendButton(m.chat, `${htki} COOLDOWN ${htka}`, `ʏᴏᴜʀ ᴘᴇᴛ ɪs ғᴜʟʟ, ᴛʀʏ ғᴇᴇᴅɪɴɢ ɪᴛ ᴀɢᴀɪɴ ɪɴ\n➞ *${waktuc}*`, null, [['ɪɴᴠᴇɴᴛᴏʀʏ', '.inv']], m)
             break
         case 'dog':
-            if (anjing == 0) return conn.sendButton(m.chat, `Tidak Di Temukan`, 'Kamu Belum Mempunyai Pet Ini!', null, [['Inventory', '.inv'],['Beli Pet', '.petshop']],m)
-            if (anjing == 10) return conn.sendButton(m.chat, `Level Max`, 'Pet Kamu Sudah Level Max', null, [['Inventory', '.inv'],['Beli Pet Baru', '.petshop']],m)
+            if (anjing == 0) return conn.sendButton(m.chat, `${htki} NOT FOUND ${htka}`, 'ʏᴏᴜ ᴅᴏɴ\'ᴛ ʜᴀᴠᴇ ᴛʜɪs ᴘᴇᴛ ʏᴇᴛ!', null, [['ɪɴᴠᴇɴᴛᴏʀʏ', '.inv'],['ʙᴜʏ ᴘᴇᴛ', '.petshop']],m)
+            if (anjing == 10) return conn.sendButton(m.chat, `${htki} LEVEL MAX ${htka}`, 'ʏᴏᴜʀ ᴘᴇᴛ ɪs ᴍᴀx ʟᴇᴠᴇʟ !', null, [['ɪɴᴠᴇɴᴛᴏʀʏ', '.inv'],['ʙᴜʏ ɴᴇᴡ ᴘᴇᴛ', '.petshop']],m)
             let __waktua = (new Date - user.doglastfeed)
             let _waktua = (600000 - __waktua)
             let waktua = clockString(_waktua)
@@ -79,15 +79,15 @@ let pesan = pickRandom(['Nyumm~', 'Makasih', 'Terima Kasih ^-^', '...', 'Nyawww~
                         if (user.dogexp > naiklvl) {
                             user.dog += 1
                             user.dogexp -= (anjing * 100)
-                            conn.sendButton(m.chat, `Level Up`, `*Selamat!* , Pet Kamu Naik Level`,null, [['Inventory', '.inv'],['sᴇᴇ ᴀʙɪʟɪᴛʏ ᴘᴇᴛ', '.petshop']], m)
+                            conn.sendButton(m.chat, `${htki} LEVELUP ${htka}`, `*ᴄᴏɴɢʀᴀᴛs!* , ʏᴏᴜʀ ᴘᴇᴛ ʟᴇᴠᴇʟᴜᴘ`,null, [['ɪɴᴠᴇɴᴛᴏʀʏ', '.inv'],['sᴇᴇ ᴀʙɪʟɪᴛʏ ᴘᴇᴛ', '.petshop']], m)
                         }
                     }
-                } else m.reply(`Makanan Pet Kamu Tidak Ada`)
-            } else conn.sendButton(m.chat, `Level Up`, `Pet Kamu Udah Kenyang, Bisa Memberimakan Pet Lagi Dalam Waktu\n*${waktua}*`, null, [['Inventory', '.inv']], m)
+                } else m.reply(`ʏᴏᴜʀ ᴘᴇᴛ ғᴏᴏᴅ ɴᴏᴛ ᴇɴᴏᴜɢʜ`)
+            } else conn.sendButton(m.chat, `${htki} COOLDOWN ${htka}`, `ʏᴏᴜʀ ᴘᴇᴛ ɪs ғᴜʟʟ, ᴛʀʏ ғᴇᴇᴅɪɴɢ ɪᴛ ᴀɢᴀɪɴ ɪɴ\n➞ *${waktua}*`, null, [['ɪɴᴠᴇɴᴛᴏʀʏ', '.inv']], m)
             break
         case 'horse':
-            if (kuda == 0) return conn.sendButton(m.chat, `Tidak Di Temukan`, 'Kamu Belum Mempunyai Pet Ini!', null, [['Inventory', '.inv'],['Beli Pet', '.petshop']],m)
-            if (kuda == 10) return conn.sendButton(m.chat, `Level Max`, 'Pet Kamu Sudah Level Max', null, [['Inventory', '.inv'],['Beli Pet Baru', '.petshop']],m)
+            if (kuda == 0) return conn.sendButton(m.chat, `${htki} NOT FOUND ${htka}`, 'ʏᴏᴜ ᴅᴏɴ\'ᴛ ʜᴀᴠᴇ ᴛʜɪs ᴘᴇᴛ ʏᴇᴛ!', null, [['ɪɴᴠᴇɴᴛᴏʀʏ', '.inv'],['ʙᴜʏ ᴘᴇᴛ', '.petshop']],m)
+            if (kuda == 10) return conn.sendButton(m.chat, `${htki} LEVEL MAX ${htka}`, 'ʏᴏᴜʀ ᴘᴇᴛ ɪs ᴍᴀx ʟᴇᴠᴇʟ !', null, [['ɪɴᴠᴇɴᴛᴏʀʏ', '.inv'],['ʙᴜʏ ɴᴇᴡ ᴘᴇᴛ', '.petshop']],m)
             let __waktuk = (new Date - user.horselastfeed)
             let _waktuk = (600000 - __waktuk)
             let waktuk = clockString(_waktuk)
@@ -102,14 +102,14 @@ let pesan = pickRandom(['Nyumm~', 'Makasih', 'Terima Kasih ^-^', '...', 'Nyawww~
                         if (user.horseexp > naiklvl) {
                             user.horse += 1
                             user.horseexp -= (kuda * 100)
-                            conn.sendButton(m.chat, `Level Up`, `*Selamat!* , Pet Kamu Naik Level`,null, [['Inventory', '.inv'],['sᴇᴇ ᴀʙɪʟɪᴛʏ ᴘᴇᴛ', '.petshop']], m)
+                            conn.sendButton(m.chat, `${htki} LEVELUP ${htka}`, `*ᴄᴏɴɢʀᴀᴛs!* , ʏᴏᴜʀ ᴘᴇᴛ ʟᴇᴠᴇʟᴜᴘ`,null, [['ɪɴᴠᴇɴᴛᴏʀʏ', '.inv'],['sᴇᴇ ᴀʙɪʟɪᴛʏ ᴘᴇᴛ', '.petshop']], m)
                         }
                     }
-                } else m.reply(`Makanan Pet Kamu Tidak Ada`)
-            } else conn.sendButton(m.chat, `Level Up`, `Pet Kamu Udah Kenyang, Bisa Memberimakan Pet Lagi Dalam Waktu\n*${waktuk}*`, null, [['Inventory', '.inv']], m)
+                } else m.reply(`ʏᴏᴜʀ ᴘᴇᴛ ғᴏᴏᴅ ɴᴏᴛ ᴇɴᴏᴜɢʜ`)
+            } else conn.sendButton(m.chat, `${htki} COOLDOWN ${htka}`, `ʏᴏᴜʀ ᴘᴇᴛ ɪs ғᴜʟʟ, ᴛʀʏ ғᴇᴇᴅɪɴɢ ɪᴛ ᴀɢᴀɪɴ ɪɴ\n➞ *${waktuk}*`, null, [['ɪɴᴠᴇɴᴛᴏʀʏ', '.inv']], m)
             break
         default:
-            return conn.sendButton(m.chat, `Tidak Di Temukan`, info, null, [['Inventory', '.inv'],['Beli Pet', '.petshop']], m)
+            return conn.sendButton(m.chat, `${htki} NOT FOUND ${htka}`, info, null, [['ɪɴᴠᴇɴᴛᴏʀʏ', '.inv'],['ʙᴜʏ ᴘᴇᴛ', '.petshop']], m)
     }
 }
 handler.help = ['feed']

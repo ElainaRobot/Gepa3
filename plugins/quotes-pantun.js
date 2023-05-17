@@ -18,7 +18,6 @@ m.reply(cin)
 handler.help = ['pantun']
 handler.tags = ['quotes']
 handler.command = /^(pantun)$/i
-handler.limit = true
 export default handler
 
 function ucapan() {

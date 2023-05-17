@@ -3,22 +3,22 @@ let handler = async (m, { usedPrefix }) => {
     let user = global.db.data.users[m.sender]
     let timers = (cooldown - (new Date - user.lastmining))
     if (user.health < 80) return m.reply(`
-Membutuhkan 80 Health Untuk Mining!!
-Silahkan Beli ❤️Healths Dulu, Ketik *${usedPrefix}buy potion <quantity>*,
-Dan Ketik *${usedPrefix}heal <quantity>* Untuk Menggunakannya
+Requires at least 80 ❤️Healths for the mining!!
+please buy ❤️Healths first by typing *${usedPrefix}buy potion <quantity>*,
+and type *${usedPrefix}heal <quantity>* to use potions
 `.trim())
-    if (user.pickaxe == 0) return m.reply('Mau Mining Ga Punya Pickaxe 🗿')
+    if (user.pickaxe == 0) return m.reply('Mau mining ga punya pickaxe 🗿')
     if (new Date - user.lastmining <= cooldown) return m.reply(`
-Kamu Sudah Mining Tunggu Selama *🕐${timers.toTimeString()}* Lagi
+You're already mining!!, please wait *🕐${timers.toTimeString()}*
 `.trim())
     const rewards = reward(user)
-    let text = 'Kamu Mining Dan Terjun Ke Isekai'
+    let text = 'you\'ve been mining and lost'
     for (const lost in rewards.lost) if (user[lost]) {
         const total = rewards.lost[lost].getRandom()
         user[lost] -= total * 1
         if (total) text += `\n*${global.rpg.emoticon(lost)}${lost}:* ${total}`
     }
-    text += '\n\nTapi Kamu Mendapatkan'
+    text += '\n\nBut you got'
     for (const rewardItem in rewards.reward) if (rewardItem in user) {
         const total = rewards.reward[rewardItem].getRandom()
         user[rewardItem] += total * 1

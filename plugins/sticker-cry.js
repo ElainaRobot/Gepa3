@@ -1,3 +1,7 @@
+/*let fetch = require("node-fetch")
+const { sticker } = require('../lib/sticker')
+const { MessageType } = require('@adiwajshing/baileys')
+*/
 import fetch from 'node-fetch'
 let { MessageType } = (await import('@adiwajshing/baileys')).default
 import { sticker } from '../lib/sticker.js'

@@ -19,7 +19,7 @@ m.reply(bcod)
 handler.help = ['bacot']
 handler.tags = ['quotes']
 handler.command = /^(bacot)$/i
-handler.limit = true
+handler.register = true
 
 export default handler
 

@@ -10,7 +10,7 @@ let handler = async (m, { conn, command, text, args }) => {
 }
 handler.help = ['addlimit']
 handler.tags = ['owner']
-handler.command = /^addlimitt$/i
+handler.command = /^addlimit(user)?$/i
 handler.rowner = true
 
 export default handler

@@ -98,7 +98,7 @@ const listMessage = {
           break
 
         default:
-          return conn.sendButton( m.chat, caption, wm, null, [`⋮☰ Menu`, `.menu`], m)
+          return conn.sendButton( m.chat, caption, wm, null, [`Menu`, `.menu`], m)
       }
     }
   } catch (err) {

@@ -1,3 +1,4 @@
+// zyko-md
 let handler = async (m, { conn, text }) => {
    if (!text) throw `Masukan Text Untuk Bio Baru Bot`
      try {

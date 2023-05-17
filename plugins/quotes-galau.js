@@ -11,7 +11,6 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 handler.help = ["galau"];
 handler.tags = ["quotes"];
 handler.command = /^(galau)$/i;
-handler.limit = true
 export default handler;
 
 function pickRandom(list) {

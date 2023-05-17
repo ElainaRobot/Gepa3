@@ -13,7 +13,7 @@ m.reply(cina)
 handler.help = ['sindiran']
 handler.tags = ['quotes']
 handler.command = /^(sindiran)$/i
-handler.limit = true
+
 export default handler
 
 function pickRandom(list) {
