@@ -35,46 +35,46 @@ const readMore = more.repeat(4001)
 
 
 global.owner = [
-['62895627413377', true],
-['628889616144', true],
-['6285776353741', 'Zeltoria', true]
+['6282229217681', true],
+['6282229217681', true],
+['6282229217681', 'Wahab', true]
 ]
 global.mods = []
 global.prems = []
-global.nomorbot = '6283872069307'
-global.nomorown = '6285776353741'
-global.nomorown1 = '6285776353741'
+global.nomorbot = '6285341725791'
+global.nomorown = '6282229217681'
+global.nomorown1 = '6282229217681'
 global.nomorown2 = '6285776353741'
-global.nomorwa = '6285776353741'
+global.nomorwa = '+1(201)6033742'
 
 
 global.readMore = readMore
-global.author = 'Zeltoria'
-global.namebot = '​Yaemiko-MD'
-global.wm = '© Yaemiko By Zeltoria'
+global.author = 'ɪɴᴏʀʏ ᴀɴᴅ ᴡᴀʜᴀʙ'
+global.namebot = '​ᴇʟᴀɪɴᴀ ʀᴏʙᴏᴛ'
+global.wm = '© ᴇʟᴀɪɴᴀ ʀᴏʙᴏᴛ ʙʏ ɪɴᴏʀʏ ᴀɴᴅ ᴡᴀʜᴀʙ'
 global.media = 'https://telegra.ph/file/d368a50703e77d972118b.jpg'
 global.watermark = wm
-global.wm2 = 'Zeltoria'
+global.wm2 = 'ɪɴᴏʀʏ ᴀɴᴅ ᴡᴀʜᴀʙ'
 global.botdate = `Date: ${week} ${date}\nTime: ${wktuwib}`
 global.bottime = `Time: ${wktuwib}`
-global.titlebot = `Yaemiko-Multidevice`
-global.stickpack = 'Yaemiko By'
-global.stickauth = `©Zeltoria`
+global.titlebot = `ᴇʟᴀɪɴᴀ ʀᴏʙᴏᴛ`
+global.stickpack = 'ᴇʟᴀɪɴᴀ ʀᴏʙᴏᴛ ʙʏ'
+global.stickauth = `©ɪɴᴏʀʏ ᴀɴᴅ ᴡᴀʜᴀʙ`
 global.week = `${week} ${date}`
 global.wibb = `${wktuwib}`
-global.nameown1= 'Zeltoria'
-global.nameown2 = 'Zeltoria'
+global.nameown1= 'ɪɴᴏʀʏ'
+global.nameown2 = 'ɪɴᴏʀʏ'
 global.Linkgc = 'Bentar'
-global.lynk = 'https://lynk.id/'
+global.lynk = '-'
 //Link Social Media Ganti Aja Kalau Ga Punya Biarin Aja
-global.sig = 'https://www.instagram.com/danilelistz02' //instagram
-global.sgh = 'https://github.com/Zeltoria' //github
-global.sgc = 'https://chat.whatsapp.com/FcV0KFRw5gv99xgVgOx3cc' //group whatsapp
+global.sig = '-' //instagram
+global.sgh = 'ᴄᴀʀɪ ᴀᴘᴀ ʙᴀɴɢ' //github
+global.sgc = 'https://chat.whatsapp.com/IESxGvj3iuw5CVVtSMFCwl' //group whatsapp
 global.sdc = '-' //discord
 global.snh = 'https://www.youtube.com/' //youtube
 //Donasi/Payment
 global.pdana = '-' // dana
-global.povo = '0896-1075-0607'
+global.povo = '0822-2921-7681'
 global.pgopay = '-' // gopay
 global.plinkaja = '-' //link aja
 global.ppulsa = '-' // pulsa
